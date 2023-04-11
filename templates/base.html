@@ -12,15 +12,17 @@
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">      
 </head>
 
-<body>
-    <nav class="navbar navbar-dark bg-dark">
+<body class="bg-light text-dark">
+    <nav class="navbar navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="#">AI Demo</a>
-            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Help</button>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="button">Help</button>
         </div>
     </nav>
     <div class="container">
-        <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
+        <div id="content" class="jumbotron my-3 text-center">
+            {% block content %}{% endblock %}
+        </div>
     </div>
 </body>
 
