@@ -1,19 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>CTMO Transient Classifier</h2>
+<h1>CTMO Transient Classifier</h1>
 
-<div>
-    <form id="upload-file" method="post" enctype="multipart/form-data" action="/predict" onsubmit="uploadImage(event)">
+<form id="upload-file" method="post" enctype="multipart/form-data" action="/predict" onsubmit="uploadImage(event)">
+    <div class="form-group">
         <label for="imageUpload" class="upload-label">
             Choose...
         </label>
         <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg, .fits, .fit, .npy">
-    </form>
-
     </div>
-    <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
-</div>
+</form>
+
+<button type="button" class="btn btn-warning btn-lg " id="btn-predict">Predict!</button>
 
 <div class="loader" style="display:none;"></div>
 
